@@ -27,7 +27,7 @@ pub struct Algorithm(hmac::Algorithm);
 impl Algorithm {
     /// The underlying HMAC algorithm.
     #[inline]
-    pub fn hmac_algorithm(&self) -> hmac::Algorithm {
+    pub const fn hmac_algorithm(&self) -> hmac::Algorithm {
         self.0
     }
 }

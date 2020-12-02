@@ -118,7 +118,7 @@ pub struct Algorithm(&'static digest::Algorithm);
 impl Algorithm {
     /// The digest algorithm this HMAC algorithm is based on.
     #[inline]
-    pub fn digest_algorithm(&self) -> &'static digest::Algorithm {
+    pub const fn digest_algorithm(&self) -> &'static digest::Algorithm {
         self.0
     }
 }
